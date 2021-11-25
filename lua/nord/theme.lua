@@ -106,16 +106,16 @@ theme.loadEditor = function ()
     Question =         { fg = nord.nord14_gui },
     QuickFixLine =     { fg = nord.nord4_gui, nord.nord6_gui, style = 'reverse' },
     qfLineNr =         { fg = nord.nord4_gui, nord.nord6_gui, style = 'reverse' },
-    Search =           { fg = nord.nord1_gui, bg = nord.nord6_gui, style = 'reverse' },
+    Search =           { fg = nord.nord6_gui, bg = nord.nord3_gui},
     SpecialKey =       { fg = nord.nord9_gui },
     SpellBad =         { fg = nord.nord11_gui, bg = nord.none, style = 'italic,undercurl' },
     SpellCap =         { fg = nord.nord7_gui, bg = nord.none, style = 'italic,undercurl' },
     SpellLocal =       { fg = nord.nord8_gui, bg = nord.none, style = 'italic,undercurl' },
     SpellRare =        { fg = nord.nord9_gui, bg = nord.none, style = 'italic,undercurl' },
-    StatusLine =       { fg = nord.nord4_gui, bg = nord.nord2_gui },
-    StatusLineNC =     { fg = nord.nord4_gui, bg = nord.nord1_gui },
-    StatusLineTerm =   { fg = nord.nord4_gui, bg = nord.nord2_gui },
-    StatusLineTermNC = { fg = nord.nord4_gui, bg = nord.nord1_gui },
+    StatusLine =       { fg = nord.nord00_gui, bg = nord.nord00_gui},
+    StatusLineNC =     { fg = nord.nord00_gui, bg = nord.nord00_gui},
+    StatusLineTerm =   { fg = nord.nord00_gui, bg = nord.nord00_gui },
+    StatusLineTermNC = { fg = nord.nord00_gui, bg = nord.nord00_gui },
     TabLineFill =      { fg = nord.nord4_gui },
     TablineSel =       { fg = nord.nord8_gui, bg = nord.nord3_gui },
     Tabline =          { fg = nord.nord4_gui },
@@ -162,11 +162,7 @@ theme.loadEditor = function ()
   end
 
   -- Remove window split borders
-  if vim.g.nord_borders then
-    editor.VertSplit = { fg = nord.nord2_gui }
-  else
-    editor.VertSplit = { fg = nord.nord0_gui }
-  end
+  editor.VertSplit = { fg = nord.nord2_gui }
 
   return editor
 end
@@ -343,9 +339,9 @@ theme.loadPlugins = function()
     GitSignsAdd =      { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
     GitSignsAddNr =    { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
     GitSignsAddLn =    { fg = nord.nord14_gui }, -- diff mode: Added line |diff.txt|
-    GitSignsChange =   { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitSignsChangeNr = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
-    GitSignsChangeLn = { fg = nord.nord15_gui }, -- diff mode: Changed line |diff.txt|
+    GitSignsChange =   { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
+    GitSignsChangeNr = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
+    GitSignsChangeLn = { fg = nord.nord13_gui }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete =   { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
     GitSignsDeleteNr = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
     GitSignsDeleteLn = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
@@ -359,8 +355,8 @@ theme.loadPlugins = function()
     TelescopeMatching =       { fg = nord.nord8_gui },
 
     -- NvimTree
-    NvimTreeRootFolder =        { fg = nord.nord7_gui, style = "bold" },
-    NvimTreeGitDirty =          { fg = nord.nord15_gui },
+    NvimTreeRootFolder =        { fg = nord.nord9_gui, style = "bold" },
+    NvimTreeGitDirty =          { fg = nord.nord13_gui },
     NvimTreeGitNew =            { fg = nord.nord14_gui },
     NvimTreeImageFile =         { fg = nord.nord15_gui },
     NvimTreeExecFile =          { fg = nord.nord14_gui },
@@ -369,6 +365,7 @@ theme.loadPlugins = function()
     NvimTreeEmptyFolderName=    { fg = nord.nord1_gui },
     NvimTreeFolderIcon=         { fg = nord.nord4_gui },
     NvimTreeIndentMarker =      { fg  = nord.nord1_gui },
+    NvimTreeVertSplit =         { fg  = nord.nord0_gui },
     LspDiagnosticsError =       { fg = nord.nord11_gui },
     LspDiagnosticsWarning =     { fg = nord.nord15_gui },
     LspDiagnosticsInformation = { fg = nord.nord10_gui },
@@ -408,14 +405,14 @@ theme.loadPlugins = function()
         -- Sneak
     Sneak =      { fg = nord.nord0_gui, bg = nord.nord4_gui },
     SneakScope = { bg = nord.nord1_gui },
-		
+
     -- Cmp
     CmpItemKind =	{ fg = nord.nord15_gui },
     CmpItemAbbrMatch =	{ fg = nord.nord5_gui, style = 'bold' },
     CmpItemAbbrMatchFuzzy = { fg = nord.nord5_gui, style = 'bold' },
     CmpItemAbbr =	{ fg = nord.nord4_gui},
     CmpItemMenu =       { fg = nord.nord14_gui },
-		
+
     -- Indent Blankline
     IndentBlanklineChar =        { fg = nord.nord3_gui },
     IndentBlanklineContextChar = { fg = nord.nord10_gui },
@@ -466,7 +463,7 @@ theme.loadPlugins = function()
 
   -- Disable nvim-tree background
   if vim.g.nord_disable_background then
-    plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.none }
+    plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.sidebar }
   else
     plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.sidebar }
   end
@@ -474,7 +471,7 @@ theme.loadPlugins = function()
   if vim.g.nord_enable_sidebar_background then
     plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.sidebar }
   else
-    plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.none }
+    plugins.NvimTreeNormal = { fg = nord.nord4_gui, bg = nord.sidebar }
   end
 
   return plugins
