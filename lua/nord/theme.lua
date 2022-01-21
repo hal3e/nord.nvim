@@ -122,7 +122,7 @@ theme.loadEditor = function ()
     Title =            { fg = nord.nord14_gui, bg = nord.none, style = 'bold' },
     Visual =           { fg = nord.none, bg = nord.nord1_gui },
     VisualNOS =        { fg = nord.none, bg = nord.nord1_gui },
-    WarningMsg =       { fg = nord.nord15_gui },
+    WarningMsg =       { fg = nord.nord13_gui },
     WildMenu =         { fg = nord.nord12_gui, bg = nord.none, style = 'bold' },
     CursorColumn =     { fg = nord.none, bg = nord.cursorlinefg },
     CursorLine =       { fg = nord.none, bg = nord.cursorlinefg },
@@ -133,11 +133,11 @@ theme.loadEditor = function ()
     ReplacelMode =     { fg = nord.nord11_gui, bg = nord.none, style = 'reverse' },
     VisualMode =       { fg = nord.nord9_gui, bg = nord.none, style = 'reverse' },
     CommandMode =      { fg = nord.nord4_gui, bg = nord.none, style = 'reverse' },
-    Warnings =         { fg = nord.nord15_gui },
+    Warnings =         { fg = nord.nord13_gui },
 
     healthError =   { fg = nord.nord11_gui },
     healthSuccess = { fg = nord.nord14_gui },
-    healthWarning = { fg = nord.nord15_gui },
+    healthWarning = { fg = nord.nord13_gui },
 
     -- dashboard
     DashboardShortCut = { fg = nord.nord7_gui },
@@ -259,11 +259,11 @@ theme.loadLSP = function ()
     LspDiagnosticsFloatingError =          { fg = nord.nord11_gui }, -- used for "Error" diagnostic messages in the diagnostics float
     LspDiagnosticsVirtualTextError =       { fg = nord.nord11_gui }, -- Virtual text "Error"
     LspDiagnosticsUnderlineError =         { style = 'undercurl', sp = nord.nord11_gui }, -- used to underline "Error" diagnostics.
-    LspDiagnosticsDefaultWarning =         { fg = nord.nord15_gui}, -- used for "Warning" diagnostic signs in sign column
-    LspDiagnosticsSignWarning =            { fg = nord.nord15_gui}, -- used for "Warning" diagnostic signs in sign column
-    LspDiagnosticsFloatingWarning =        { fg = nord.nord15_gui}, -- used for "Warning" diagnostic messages in the diagnostics float
-    LspDiagnosticsVirtualTextWarning =     { fg = nord.nord15_gui}, -- Virtual text "Warning"
-    LspDiagnosticsUnderlineWarning =       { style = 'undercurl', sp = nord.nord15_gui }, -- used to underline "Warning" diagnostics.
+    LspDiagnosticsDefaultWarning =         { fg = nord.nord13_gui}, -- used for "Warning" diagnostic signs in sign column
+    LspDiagnosticsSignWarning =            { fg = nord.nord13_gui}, -- used for "Warning" diagnostic signs in sign column
+    LspDiagnosticsFloatingWarning =        { fg = nord.nord13_gui}, -- used for "Warning" diagnostic messages in the diagnostics float
+    LspDiagnosticsVirtualTextWarning =     { fg = nord.nord13_gui}, -- Virtual text "Warning"
+    LspDiagnosticsUnderlineWarning =       { style = 'undercurl', sp = nord.nord13_gui }, -- used to underline "Warning" diagnostics.
     LspDiagnosticsDefaultInformation =     { fg = nord.nord10_gui }, -- used for "Information" diagnostic virtual text
     LspDiagnosticsSignInformation =        { fg = nord.nord10_gui },  -- used for "Information" diagnostic signs in sign column
     LspDiagnosticsFloatingInformation =    { fg = nord.nord10_gui }, -- used for "Information" diagnostic messages in the diagnostics float
@@ -355,21 +355,21 @@ theme.loadPlugins = function()
     TelescopeMatching =       { fg = nord.nord8_gui },
 
     -- NvimTree
-    NvimTreeRootFolder =        { fg = nord.nord9_gui, style = "bold" },
+    NvimTreeRootFolder =        { fg = nord.nord11_gui, style = "bold" },
     NvimTreeGitDirty =          { fg = nord.nord13_gui },
     NvimTreeGitNew =            { fg = nord.nord14_gui },
-    NvimTreeImageFile =         { fg = nord.nord15_gui },
     NvimTreeExecFile =          { fg = nord.nord14_gui },
-    NvimTreeSpecialFile =       { fg = nord.nord9_gui , style = "underline" },
+    NvimTreeImageFile =         { fg = nord.nord4_gui },
     NvimTreeFolderName=         { fg = nord.nord10_gui },
+    NvimTreeOpenedFolderName=   { fg = nord.nord9_gui },
     NvimTreeEmptyFolderName=    { fg = nord.nord1_gui },
     NvimTreeFolderIcon=         { fg = nord.nord4_gui },
     NvimTreeIndentMarker =      { fg  = nord.nord1_gui },
     NvimTreeVertSplit =         { fg  = nord.nord0_gui },
-    LspDiagnosticsError =       { fg = nord.nord11_gui },
-    LspDiagnosticsWarning =     { fg = nord.nord15_gui },
-    LspDiagnosticsInformation = { fg = nord.nord10_gui },
-    LspDiagnosticsHint =        { fg = nord.nord9_gui },
+    NvimTreeLspDiagnosticsError =       { fg = nord.nord11_gui },
+    NvimTreeLspDiagnosticsWarning =     { fg = nord.nord13_gui },
+    NvimTreeLspDiagnosticsInformation = { fg = nord.nord10_gui },
+    NvimTreeLspDiagnosticsHint =        { fg = nord.nord9_gui },
 
     -- WhichKey
     WhichKey =          { fg = nord.nord4_gui , style = 'bold'},
