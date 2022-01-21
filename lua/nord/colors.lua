@@ -21,14 +21,8 @@ local nord = {
   none =          'NONE'
 }
 
--- Enable contrast sidebars, floating windows and popup menus
-if vim.g.nord_contrast == true then
-  nord.sidebar = nord.nord00_gui
-  nord.float = nord.nord00_gui
-else
-  nord.sidebar = nord.nord00_gui
-  nord.float = nord.nord00_gui
-end
+nord.sidebar = nord.nord00_gui
+nord.float = nord.nord0_gui
 
 if vim.g.nord_cursorline_transparent == true then
   nord.cursorlinefg = nord.nord0_gui
